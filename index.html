@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Navigation Bar Section  */
+  
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 7px;
+            background-color: #000;
+            position: sticky;
+        }
+
+        .navbar .logo img {
+            width: 180px;
+            height: auto;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .navbar .navlinks {
+            margin-left: auto; 
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navlinks a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+        /* Introduction Section */
+        .intro {
+            height: 91vh;
+            background: url('introimg.png') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .introimg {
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .introtxt {
+            text-align: left;
+            max-width: 50%;
+        }
+
+        .introtxt h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .introtxt p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+
+        /* Table of Contents Section */
+        .toc {
+            width: 60%;
+            padding: 30px 0;
+            margin-bottom: 20px;
+            margin-left: 270px;
+            border-bottom: 2px solid #fff;
+        }
+
+        .toc h2 {
+            font-size: 37px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+        .toc table {
+            width: 40%;
+            margin: 0 auto;
+            text-align: center;    
+        }
+
+        .toc table td {
+            padding: 20px;
+            font-size: 24px;
+            border: 1px solid #fff;
+            background-color: white;
+        }
+
+        .section {
+            padding: 8px;
+            margin-bottom: 5px;
+            text-align: left;
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        #references p {
+            margin-bottom: 1.5em; /* Adjust the value as needed */
+        }
+        #analysis p {
+            margin-bottom: 1.5em; /* Adjust the value as needed */
+        }
+
+        #presentation {
+            margin-left: 300px;;
+        }
+        #lastmod{
+            margin-left: 300px;;
+
+        }
+        #totalWordCount {
+            margin-left: 600px;;
+
+
+        }
+
+        #references p:target {
+            background-color: rgba(255, 255, 170, 0.482);
+        
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 8px;
+        }
+      
+        
+
+
+    </style>
+    
+</head>
+<body>
+   <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="Webanner1.png" alt="University Logo">
+        </div>
+
+        <div class="navlinks">
+            <a class="active" href="#home">Home</a>
+            <a href="#toc">Table of Contents</a>
+            <a href="#presentation">Presentation</a>
+            <a href="#references">References List</a>
+        </div>
+
+        
+    </div>
+
+
+     <!-- Introduction Section -->
+     <section class="intro">
+        <div class="introimg">
+            <div class="introtxt">
+                <h1>The functionality behind AI tools like ChatGPT</h1>
+                <h2><b id="texteffect"></b><span id="year-text"></span></h2>
+                <p>Student URN: 6866098</p>
+
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- Table of Contents Section -->
+     <section id="toc" class="toc" >
+        <h2>Table of Contents</h2>
+        <table>
+            <tr>
+                <td><a href="#abstract">Abstract</a></td>
+            </tr>
+            <tr>
+                <td><a href="#introduction">Introduction</a></td>
+            </tr>
+            <tr>
+                <td><a href="#analysis">Analysis and Discussion</a></td>
+            </tr>
+            <tr>
+                <td><a href="#conclusion">Conclusion</a></td>
+            </tr>
+        
+            <tr>
+                <td><a href="#references">References</a></td>
+            </tr>
+            <tr>
+                <td><a href="#presentation">Presentation</a></td>
+            </tr>
+           
+        </table>
+    </section>
+  
+
+    <!-- Abstract Section -->
+    <section id="section" class="section">
+        <h2>Abstract</h2>
+        <p>The functionality of generative AI tools such as ChatGTP will be examined in this essay. The transformer architecture, which serves as the brain of the generative AI tools, goes through a number of crucial stages, such as the creation of attention, self-attention mechanisms, context vectors, and the decoder procedure. The attention mechanism helps the model to divide the sentence into specific words and identify its importance. The self-attention mechanism assigns the attention score to each divided word in the sentence and uses softmax to normalize these scores.  The generation of context vectors help to identify the relationship between each word and capture their significance to each other. In the final stage, the decoder generates an answer by using the context vectors to predict the next word. The decoder ensures accuracy and relevance by producing an output that corresponds with the user's input by utilising the relationships found in previous stages. 
+        </p>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="section">
+        <h2>Introduction</h2>
+        <p id="introductionT">
+            The use of Generative AI has become an uprising technology in today’s world due to its capability to generate new content. It does this through several key stages as well as makes an effective use of a deep learning model and machine learning process, known as a transformer architecture 
+        This model consists of several key stages; attention mechanism, self-attention mechanism, context vector generator, and the decoder stage 
+     . Generative AI tools like ChatGPT combine these stages in order to output an appropriate final answer to the given input by the user 
+             This essay will explore the functionality behind generative AI tools like ChatGPT and explain key aspects of each stage.   
+        </p>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="section">
+        <h2>Analysis and Discussion</h2>
+        <p id="analysisT1">The central question revolves around how generative AI truly functions and underlying logic behind it. To begin with, generative AI uses machine learning processes and a deep learning model to analyse and interpret data<a href="#reference-heo-2024">(Heo and Choi, 2024)</a>. Deep learning is one of the most sophisticated machine learning techniques <a href="#reference-alahmed-2023">(Alahmed et al., 2023)</a>. The structure and interconnected layers of artificial neurons in deep learning models are very similar to those in the human brain; they replicate how the brain learns and analyses information and makes decisions  <a href="#reference-chakraborty-2023">(Chakraborty et al., 2023)</a>.   </p>
+        <p id="analysisT2">One example of the deep learning models that is commonly used in Generative AI tools, such as ChatGPT, is the  “transformer architecture” <a href="#reference-zhang-2023">(Zhang et al., 2023)</a>. This model enables these AI tools to process information and generate answers that closely resemble human-like communication <a href="#reference-prakash-2023">(Prakash, 2023)</a>. For instance, when typing an input in ChatGPT, the transformer architecture will try to understand and analyze the input by dividing it into words, and finding the relationship between these words. This process is well known as an attention mechanism and is one of the most important elements of the  transformer architecture. According to <a href="#reference-ritala-2024">(Ritala et al., 2024),</a> it enables the deep learning model to concentrate on the most crucial aspects of the user's input. In reality, the attention mechanism first examines the input as a whole sentence to comprehend its context before concentrating on the sentence's key words to establish a relationship <a href="#reference-roose-2023">(Roose, 2023)</a>. For instance, if the question is, " What is the weather in England today?" The terms "weather," "today," and "England" are the main focus of the attention mechanism(refer to Figure 1). In order to understand and analyse that "weather" refers to the atmospheric conditions at a certain location, "today" refers to the time frame of the question, and "England" refers to the location, it subsequently looks for a relationship between these two terms <a href="#reference-sengar-2024">(Sengar et al., 2024)</a>. Combining these key words of the sentence chosen by attention mechanism helps the deep learning model to understand that the user is asking about current weather conditions in England   <a href="#reference-holland-2024">(Holland & Ciachir, 2024)</a>.       </p>
+        <h3>Figure 1: Bar Chart of Attention Scores for Words in the Question "What's the weather like today in England?"</h3>
+        <div id="chart_div" style="width: 600px; height: 400px; margin: 20px auto;"></div>
+        <p id="analysisT3">
+            Delving deeper into self attention mechanism that is used to identify the relationship between the keywords by assigning  keyword an “attention score” also known as attention weight, reflects how much attention the model should give to that word in relation to others<a href="#reference-heo-2024">(Heo and Choi, 2024)</a>. The self attention mechanism identified  “weather”, “today” and “England” as the most important words to understand the question itself. It achieved this by identifying the key words and then calculating how one of the words relates to every other word in the sentence, the word “weather” was chosen as a high score word because it was identified by the model's connection to the words “today” and “England”. Meanwhile, words such as "what's" and "like," on the other hand, would be given a poor score because these words have practically don't relate to the question. Softmax, a mathematical formula that aids in converting the scores into probabilities which demonstrates the relative value of each word, would then be used to normalise these scores.  It needs to be noted that the score needs to sum up to 1 (refer to Figure 2) because in probability theory - the sum all numbers must be equal to 1 <a href="#reference-heo-2024">(Heo and Choi, 2024)</a>. If the score were to sum up to any other number like 2 or above it would show that the importance of each word would not work as intended <a href="#reference-krammer-2023">[Krammer, 2023]</a>.       
+        </p>
+        <h3>Figure 2: Probability Attention Scores for words in the question -  "What's the weather like today in England?"</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Attention Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>What's</td>
+                    <td>0.039</td>
+                </tr>
+                <tr>
+                    <td>the</td>
+                    <td>0.01</td>
+                </tr>
+                <tr>
+                    <td>weather</td>
+                    <td>0.582</td>
+                </tr>
+                <tr>
+                    <td>like</td>
+                    <td>0.001</td>
+                </tr>
+                <tr>
+                    <td>today</td>
+                    <td>0.145</td>
+                </tr>
+                <tr>
+                    <td>in</td>
+                    <td>0.029</td>
+                </tr>
+                <tr>
+                    <td>England</td>
+                    <td>0.194</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p id="analysisT4">    The next step is context vector generation, in which every word is represented mathematically as a vector. The model would multiply each vector by the attention weight score and add them up to determine the context vector.The word embeddings are weighted using the attention score from the self-attention stage, and they are then added together to form a single context vector <a href="#reference-chaudhari-2023">(Chaudhari, 2023)</a>. The final stage of the transformer architecture, the decoder stage, aids the model in producing the output. Using the previously collected context and information, it guesses the next token, or the next word in the sentence.  This allows the model to output the complete sentence. Referring back to the example question, "What's the weather like today in England?", the model's output would be, "The weather today in England is rainy" because the decoder mechanism uses the relationships identified previously  to construct an appropriate final response to the question. The generation of context vectors aids in determining the connections between words and expressing relative importance. In the last step, the decoder predicts the next word using context vectors to produce an answer. By using the correlations discovered in previous stages, the decoder generates an output that matches the user's input, guaranteeing accuracy and relevance. 
+        </p>
+
+    </section>
+
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section">
+        <h2>Conclusion</h2>
+        <p id="conclusion">To conclude, generative AI works through several key stages and relies on the deep learning process in order to understand and process the given input. The brain of the ChatGPT is centered on the transformer architecture and its main stages, this includes, attention mechanism, self-attention mechanism, context vector generation, decoder and generating the final output. These stages work together to produce the final output based on the input provided by the user. ChatGPT and other generative AI are prime examples of how artificial intelligence may use complex algorithms and massive datasets to mimic human-like language production and understanding.  </p>
+    </section>
+
+    <script>
+        // Load the corechart package and set a callback function
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Callback function to draw the vertical bar chart
+        function drawChart() {
+            // Create a DataTable with columns for Word and Attention Score
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Word');
+            data.addColumn('number', 'Attention Score');
+
+            // Add data rows for each word
+            data.addRows([
+                ["What's", 0.039],
+                ["the", 0.01],
+                ["weather", 0.582],
+                ["like", 0.001],
+                ["today", 0.145],
+                ["in", 0.029],
+                ["England", 0.194]
+            ]);
+
+            // Set chart options and formatting
+            var options = {
+                title: 'Attention Scores for Words',
+                hAxis: { title: 'Word' }, // X-axis label
+                vAxis: { title: 'Attention Score' }, // Y-axis label
+                bars: 'vertical', // Display bars vertically
+                legend: 'none', // Hide legend
+                colors: ['#4285F4'] // Bar color
+            };
+
+            // Create a bar chart and place it in the 'chart_div' element
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    <section id="references" class="section">
+        <h2>References</h2>
+        <p id="reference-alahmed-2023">Alahmed, Y. et al. (2023) ‘“How Does ChatGPT Work”: Examining Functionality to the Creative AI ChatGPT on X’s (Twitter) Platform’, <em>2023 Tenth International Conference on Social Networks Analysis, Management and Security (SNAMS)</em>. [Online]. IEEE. pp. 1–7. Available at: <a href="https://ieeexplore.ieee.org/document/10375450" target="_blank">https://ieeexplore.ieee.org/document/10375450</a>.</p>
+        <p id="reference-chakraborty-2023">Chakraborty, U. et al. (2023) <em>Rise of Generative AI and ChatGPT: Understand How Generative AI and ChatGPT Are Transforming and Reshaping the Business World</em>. First edition. London, England: BPB Online. Available at: <a href="https://books.google.co.uk/books?hl=en&lr=&id=Sfu0EAAAQBAJ&oi=fnd&pg=PT24&dq=Chakraborty,+U.+et+al.+(2023)+Rise+of+Generative+AI+and+ChatGPT:+Understand+How+Generative+AI+and+ChatGPT+Are+Transforming+and+Reshaping+the+Business+World&ots=kosOYUN2hk&sig=F7YcN48XIN3TqfVtTngggpqTiT4&redir_esc=y#v=onepage&q=Chakraborty%2C%20U.%20et%20al.%20(2023)%20Rise%20of%20Generative%20AI%20and%20ChatGPT%3A%20Understand%20How%20Generative%20AI%20and%20ChatGPT%20Are%20Transforming%20and%20Reshaping%20the%20Business%20World&f=false" target="_blank">https://books.google.co.uk/books?hl=en&lr=&id=Sfu0EAAAQBAJ&oi=fnd&pg=PT24&dq=Chakraborty,+U.+et+al.+(2023)+Rise+of+Generative+AI+and+ChatGPT:+Understand+How+Generative+AI+and+ChatGPT+Are+Transforming+and+Reshaping+the+Business+World&ots=kosOYUN2hk&sig=F7YcN48XIN3TqfVtTngggpqTiT4&redir_esc=y#v=onepage&q=Chakraborty%2C%20U.%20et%20al.%20(2023)%20Rise%20of%20Generative%20AI%20and%20ChatGPT%3A%20Understand%20How%20Generative%20AI%20and%20ChatGPT%20Are%20Transforming%20and%20Reshaping%20the%20Business%20World&f=false</a>.</p>
+        <p id="reference-roose-2023">Roose, K. (2023) ‘How does ChatGPT really work?’, <em>The New York Times</em>, p. B6. Available at: <a href="https://advance.lexis.com/document/?pdmfid=1519360&crid=2115ed1b-f05c-4297-91a5-e30d5287976a&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A67YN-F5P1-DXY4-X4BS-00000-00&pdcontentcomponentid=6742&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=92672578-89d0-4b71-ba4d-2a971657cc7b" target="_blank">https://advance.lexis.com/document/?pdmfid=1519360&crid=2115ed1b-f05c-4297-91a5-e30d5287976a&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A67YN-F5P1-DXY4-X4BS-00000-00&pdcontentcomponentid=6742&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=92672578-89d0-4b71-ba4d-2a971657cc7b</a>.</p>
+        <p id="reference-ritala-2024">Ritala, P. et al. (2024) ‘Transforming boundaries: How does ChatGPT change knowledge work?’, <em>Journal of Business Strategy</em>. [Online] 45(3), pp. 214–220. Available at: <a href="https://www-emerald-com.surrey.idm.oclc.org/insight/content/doi/10.1108/jbs-05-2023-0094/full/html" target="_blank">https://www-emerald-com.surrey.idm.oclc.org/insight/content/doi/10.1108/jbs-05-2023-0094/full/html</a>.</p>
+        <p id="reference-holland-2024">Holland, A. and Ciachir, C. (2024) ‘A qualitative study of students’ lived experience and perceptions of using ChatGPT: Immediacy, equity and integrity’, <em>Interactive Learning Environments</em>. Available at: <a href="https://www.tandfonline.com/doi/full/10.1080/10494820.2024.2350655#abstract" target="_blank">https://www.tandfonline.com/doi/full/10.1080/10494820.2024.2350655#abstract</a> (Accessed: 22 November 2024).</p>
+        <p id="reference-krammer-2023">Krammer, S. M. S. (2023) ‘Is there a glitch in the Matrix? Artificial Intelligence and Management Education’, <em>Management Learning</em>. [Online]. Available at: <a href="https://journals-sagepub-com.surrey.idm.oclc.org/doi/full/10.1177/13505076231217667" target="_blank">https://journals-sagepub-com.surrey.idm.oclc.org/doi/full/10.1177/13505076231217667</a>.</p>
+        <p id="reference-chaudhari-2023">Chaudhari, S., Polatkan, G., Liang, Y. and Sanjabi, M. (2023) ‘From Turing to Transformers: A Comprehensive Review and Tutorial on Generative AI Models’, <em>Journal of Artificial Intelligence and Applications</em>, 5(4), pp. 46–70. Available at: <a href="https://www.mdpi.com/2413-4155/5/4/46" target="_blank">https://www.mdpi.com/2413-4155/5/4/46</a>.</p>
+        <p id="reference-sengar-2024">Sengar, S. S., Hasan, A. B., Kumar, S. et al. (2024) ‘Generative artificial intelligence: A systematic review and applications’, <em>Multimedia Tools and Applications</em>. Available at: <a href="https://doi.org/10.1007/s11042-024-20016-1" target="_blank">https://doi.org/10.1007/s11042-024-20016-1</a> (Accessed: 22 November 2024).</p>
+        <p id="reference-prakash-2023">Prakash, A. (2023) ‘What is transformer architecture and how does it power ChatGPT?’, <em>ThoughtSpot Blog</em>. Available at: <a href="https://www.thoughtspot.com/data-trends/ai/what-is-transformer-architecture-chatgpt" target="_blank">https://www.thoughtspot.com/data-trends/ai/what-is-transformer-architecture-chatgpt</a> (Accessed: 24 November 2024).</p>
+        <p id="reference-heo-2024">Heo, D. and Choi, H. (2024) ‘Generalized Probabilistic Attention Mechanism in Transformers’, <em>arXiv preprint</em>. Available at: <a href="https://arxiv.org/pdf/2410.15578" target="_blank">https://arxiv.org/pdf/2410.15578</a> (Accessed: 26 November 2024).</p>
+    </section>
+    
+    <section id="presentation" class="section">
+        <h1>Conference Presentation</h1>
+        <video src="ENG0018_Presentation.mp4" width="800" height="450" controls> </video>
+    </section>
+
+    <section id="lastmod" class="section">
+
+        <div id="last-updated">Loading last update time...</div>
+
+        <!-- Verify Button -->
+        <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+        Verify Last Modified Time
+        </button>
+
+        <script>
+        async function getLastUpdatedTime() {
+            const username = 'nr0025'; // Replace with your GitHub username
+            const repo = 'FY0025';    // Replace with your GitHub repository name
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+            try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+            } catch (error) {
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+            console.error('Error fetching the last updated time:', error);
+            }
+        }
+
+        // Function to verify the last update time by re-fetching it from the API
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            alert('Last modified time has been successfully verified from GitHub API.');
+        }
+
+        // Initial load to display the time on page load
+        </script>
+    </section>
+
+   <!-- Placeholder for total word count -->
+    <p id="totalWordCount"></p>
+    <hr>
+    <script>
+   // Function to calculate and display word count for a specified section
+        function displayWordCount(sectionId) {
+            // Get the text content from the specified section
+            const text = document.getElementById(sectionId).textContent;
+
+            // Split text into words based on spaces and filter out any empty strings
+            const wordArray = text.trim().split(/\s+/);
+
+            // Count the words
+            const wordCount = wordArray.length;
+
+            // Return the word count for summing purposes
+            return wordCount;
+        }
+
+        // Function to calculate and display total word count from selected sections
+        function displayTotalWordCount() {
+            // Calculate word count for the Introduction section
+            const IntroductionCount = displayWordCount("introductionT");
+
+            // Calculate word count for multiple paragraphs in the Analysis section
+            const AnalysisCount1 = displayWordCount("analysisT1");
+            const AnalysisCount2 = displayWordCount("analysisT2");
+            const AnalysisCount3 = displayWordCount("analysisT3");
+            const AnalysisCount4 = displayWordCount("analysisT4");
+
+            const ConclusionCount = displayWordCount("conclusion");
+
+
+
+            // Calculate the total word count
+            const totalWordCount = IntroductionCount + AnalysisCount1 + AnalysisCount2 + AnalysisCount3 + AnalysisCount4 + ConclusionCount;
+
+            // Display the total word count
+            document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+        }
+
+        // Run the function for specific sections and display total count when the page loads
+        window.onload = function () {
+            displayTotalWordCount(); // For calculating and displaying the total word count
+            getLastUpdatedTime();    // For displaying the last modified time from GitHub
+            typeWriter();   
+            
+        };
+    </script>
+
+    <script>
+        var i = 0;
+        var mainText = "ENG0018 Computer Laboratory 2023/24"; 
+        var speed = 200;
+
+        function typeWriter() {
+            if (i < mainText.length) {
+                document.getElementById("texteffect").innerHTML += mainText.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed); 
+            } 
+        }
+
+
+    </script>
+
+    
+
+
+</body>
+</html>
